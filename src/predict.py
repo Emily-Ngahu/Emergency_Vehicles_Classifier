@@ -30,10 +30,7 @@ def predict_vehicle(img):
         label = "Emergency Vehicle"
     else:
         label = "Non-Emergency Vehicle"
-    if label == "Emergency Vehicle":
-        st.error(f"🚨 Prediction: {label}")
-    else:
-        st.success(f"✅ Prediction: {label}")
-        
+
+
 
     return label, probability
