@@ -1,3 +1,8 @@
+import sys
+import os
+
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 import streamlit as st
 from PIL import Image
 from src.predict import predict_vehicle
@@ -20,4 +25,3 @@ if uploaded_file is not None:
     st.success(f"Prediction: {label}")
 
     st.write(f"Confidence: {probability:.2%}")
-    
