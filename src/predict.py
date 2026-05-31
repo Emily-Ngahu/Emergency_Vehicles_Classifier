@@ -2,7 +2,17 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 import numpy as np
 
-loaded_model = load_model("model/emergency_vehicle_classifier.keras")
+import os
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+MODEL_PATH = os.path.join(
+    BASE_DIR,
+    "model",
+    "emergency_vehicle_classifier.keras"
+)
+
+loaded_model = load_model(MODEL_PATH)
 
 def predict_vehicle(img):
 
