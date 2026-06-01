@@ -1,4 +1,4 @@
-# Emergency_Vehicles_Classifier
+# Emergency Vehicle Image Classifier
 
 ## Project Overview
 This project aims to develop and optimize a Convolutional Neural Network (CNN) for classifying images as either 'emergency vehicles' or 'non-emergency vehicles'. The end goal is to build a robust model that can be integrated into a simple application for real-time classification.
@@ -19,6 +19,15 @@ This project aims to develop and optimize a Convolutional Neural Network (CNN) f
     *   [Early Stopping](#early-stopping)
 7.  [Final Model Selection](#final-model-selection)
 8.  [Model Saving and Prediction](#model-saving-and-prediction)
+9.  [Project Structure and Organization](#9-project-structure-and-organization)
+    *   [Development of the Prediction Module](#development-of-the-prediction-module)
+    *   [Streamlit Application Development](#streamlit-application-development)
+    *   [Integration and Testing](#integration-and-testing)
+    *   [Deployment Preparation](#deployment-preparation)
+    *   [Installation](#installation)
+    *   [Application Preview](#application-preview)
+    *   [Future Improvements](#future-improvements)
+    *   [Conclusion](#conclusion)
 
 ---
 
@@ -85,7 +94,7 @@ Basic data exploration includes checking the shapes of the loaded arrays and vis
     Output:
     ```
     (1482, 256, 256, 3)
-    (1482,)
+    (1482,) 
     (164, 256, 256, 3)
     (164,)
     ```
@@ -242,3 +251,139 @@ The `predict_vehicle` function was tested with example image paths, one of a kno
 
 *   **Non-Emergency Vehicle Example**:
     When tested with an image of a non-emergency vehicle, the function correctly predicted it as a 'Non-Emergency Vehicle' with a low probability (e.g., 0.20648684).
+
+---
+
+## 9. Project Structure and Organization
+
+To improve maintainability and prepare the project for deployment, the project was reorganized into a structured directory layout.
+
+Emergency_Vehicles_Classifier/
+│
+├── app/
+│   └── app.py
+│
+├── model/
+│   └── emergency_vehicle_classifier.keras
+│
+├── src/
+│   └── predict.py
+│
+├── Notebooks_code/
+│   └── EVC.ipynb
+│
+├── train/
+├── test/
+├── train.csv
+├── test.csv
+├── README.md
+└── requirements.txt
+
+This structure separates model development, prediction functionality, and deployment components, making the project easier to maintain and extend.
+
+### Development of the Prediction Module
+
+A dedicated prediction module (predict.py) was created within the src directory.
+
+The module is responsible for:
+
+*   Loading the trained model
+*   Preprocessing uploaded images
+*   Generating prediction probabilities
+*   Returning classification labels
+
+The prediction workflow consists of:
+
+*   Loading the saved Keras model.
+*   Resizing uploaded images to 256 × 256 pixels.
+*   Converting images into NumPy arrays.
+*   Normalizing pixel values to the range [0,1].
+*   Expanding image dimensions.
+*   Generating prediction probabilities.
+*   Assigning class labels based on a threshold of 0.5.
+
+### Streamlit Application Development
+
+To make the model accessible through a graphical user interface, a web application was developed using Streamlit.
+
+**Features**
+*   Upload JPG, JPEG, or PNG images.
+*   Display uploaded images.
+*   Perform real-time classification.
+*   Display prediction labels.
+*   Display confidence scores.
+
+The application acts as a bridge between users and the trained CNN model, allowing predictions without requiring any programming knowledge.
+
+### Integration and Testing
+
+The prediction module and Streamlit application were integrated and tested locally.
+
+The following functionality was verified:
+
+*   Successful image upload.
+*   Successful model loading.
+*   Accurate prediction generation.
+*   Correct display of labels.
+*   Correct display of confidence scores.
+
+Testing confirmed that the deployed application produced predictions consistent with the results obtained during model evaluation.
+
+### Deployment Preparation
+
+To prepare the project for deployment and sharing, all dependencies were documented in a `requirements.txt` file.
+
+This ensures that the project can be reproduced and executed in different environments by installing the required packages.
+
+The final system consists of:
+
+*   A trained CNN model.
+*   A reusable prediction module.
+*   A Streamlit web application.
+*   A structured GitHub repository.
+
+### Installation
+
+**Clone the Repository**
+```bash
+git clone <repository-url>
+cd Emergency_Vehicles_Classifier
+Install Dependencies
+
+pip install -r requirements.txt
+Run the Application
+
+streamlit run app/app.py
+```
+
+Application Preview
+Home Page
+<img width="468" height="275" alt="image" src="https://github.com/user-attachments/assets/f6da4b01-0307-4c6d-a1ec-c1d72ad0aa68" />
+
+Emergency Vehicle Prediction
+
+<img width="917" height="612" alt="image" src="https://github.com/user-attachments/assets/c0a9d9fd-ef94-4106-9c6d-a1e529bbe0a5" />
+<img width="790" height="475" alt="image" src="https://github.com/user-attachments/assets/857e1acb-ddbc-4752-88c1-4edd07e6e402" />
+
+
+Non-Emergency Vehicle Prediction
+<img width="865" height="628" alt="image" src="https://github.com/user-attachments/assets/ff550d74-5f54-4734-a40b-a12679610b98" />
+
+<img width="419" height="302" alt="image" src="https://github.com/user-attachments/assets/4cc04fc2-b8e9-4329-ba2e-26def7ee6eb3" />
+
+
+Future Improvements
+Potential enhancements include:
+
+Support for additional vehicle categories.
+Transfer learning using MobileNetV2, EfficientNet, or ResNet.
+Model explainability using Grad-CAM.
+Deployment to Streamlit Community Cloud.
+Confidence thresholding and uncertainty warnings.
+Mobile-friendly user interface.
+
+Conclusion
+This project successfully developed an end-to-end image classification system capable of distinguishing emergency vehicles from non-emergency vehicles using a Convolutional Neural Network.
+
+The project progressed through data preprocessing, model development, hyperparameter tuning, evaluation, model persistence, application development, and deployment preparation. The final solution demonstrates how deep learning models can be transformed into practical applications through the integration of machine learning and web technologies.
+
