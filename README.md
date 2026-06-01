@@ -334,7 +334,6 @@ The final system consists of:
 *   A trained CNN model.
 *   A reusable prediction module.
 *   A Streamlit web application.
-*   A structured GitHub repository.
 
 ### Installation
 
@@ -350,7 +349,7 @@ Run the Application
 streamlit run app/app.py
 ```
 
-Application Preview
+### Application Preview
 Home Page
 <img width="468" height="275" alt="image" src="https://github.com/user-attachments/assets/f6da4b01-0307-4c6d-a1ec-c1d72ad0aa68" />
 
@@ -366,7 +365,7 @@ Non-Emergency Vehicle Prediction
 <img width="419" height="302" alt="image" src="https://github.com/user-attachments/assets/4cc04fc2-b8e9-4329-ba2e-26def7ee6eb3" />
 
 
-Future Improvements
+### Future Improvements
 Potential enhancements include:
 
 Support for additional vehicle categories.
@@ -376,7 +375,7 @@ Deployment to Streamlit Community Cloud.
 Confidence thresholding and uncertainty warnings.
 Mobile-friendly user interface.
 
-Conclusion
+### Conclusion
 This project successfully developed an end-to-end image classification system capable of distinguishing emergency vehicles from non-emergency vehicles using a Convolutional Neural Network.
 
 The project progressed through data preprocessing, model development, hyperparameter tuning, evaluation, model persistence, application development, and deployment preparation. The final solution demonstrates how deep learning models can be transformed into practical applications through the integration of machine learning and web technologies.
