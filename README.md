@@ -19,8 +19,7 @@ This project aims to develop and optimize a Convolutional Neural Network (CNN) f
     *   [Early Stopping](#early-stopping)
 7.  [Final Model Selection](#final-model-selection)
 8.  [Model Saving and Prediction](#model-saving-and-prediction)
-9.  [Project Structure and Organization](#project-structure-and-organization)
-    *   [Project Structure and Organization](#project-structure-and-organization-1)
+9.  [Project Structure and Organization](#9-project-structure-and-organization)
     *   [Development of the Prediction Module](#development-of-the-prediction-module)
     *   [Streamlit Application Development](#streamlit-application-development)
     *   [Integration and Testing](#integration-and-testing)
@@ -392,5 +391,5 @@ GitHub
 Conclusion
 This project successfully developed an end-to-end image classification system capable of distinguishing emergency vehicles from non-emergency vehicles using a Convolutional Neural Network.
 
-The project progressed through data preprocessing, model development, hyperparameter tuning, evaluation, model persistence, application development, and deployment preparation. The final solution demonstrates how deep learning models can be transformed into practical applications through the integration of machine learning and web technologies. 
+The project progressed through data preprocessing, model development, hyperparameter tuning, evaluation, model persistence, application development, and deployment preparation. The final solution demonstrates how deep learning models can be transformed into practical applications through the integration of machine learning and web technologies.
 
