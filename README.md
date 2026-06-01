@@ -334,7 +334,6 @@ The final system consists of:
 *   A trained CNN model.
 *   A reusable prediction module.
 *   A Streamlit web application.
-*   A structured GitHub repository.
 
 ### Installation
 
