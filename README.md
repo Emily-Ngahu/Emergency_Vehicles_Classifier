@@ -27,7 +27,6 @@ This project aims to develop and optimize a Convolutional Neural Network (CNN) f
     *   [Installation](#installation)
     *   [Application Preview](#application-preview)
     *   [Future Improvements](#future-improvements)
-    *   [Technologies Used](#technologies-used)
     *   [Conclusion](#conclusion)
 
 ---
@@ -355,18 +354,23 @@ pip install -r requirements.txt
 Run the Application
 
 streamlit run app/app.py
+```
+
 Application Preview
 Home Page
-
-Add screenshot here
+<img width="468" height="275" alt="image" src="https://github.com/user-attachments/assets/f6da4b01-0307-4c6d-a1ec-c1d72ad0aa68" />
 
 Emergency Vehicle Prediction
 
-Add screenshot here
+<img width="917" height="612" alt="image" src="https://github.com/user-attachments/assets/c0a9d9fd-ef94-4106-9c6d-a1e529bbe0a5" />
+<img width="790" height="475" alt="image" src="https://github.com/user-attachments/assets/857e1acb-ddbc-4752-88c1-4edd07e6e402" />
+
 
 Non-Emergency Vehicle Prediction
+<img width="865" height="628" alt="image" src="https://github.com/user-attachments/assets/ff550d74-5f54-4734-a40b-a12679610b98" />
 
-Add screenshot here
+<img width="419" height="302" alt="image" src="https://github.com/user-attachments/assets/4cc04fc2-b8e9-4329-ba2e-26def7ee6eb3" />
+
 
 Future Improvements
 Potential enhancements include:
@@ -377,17 +381,7 @@ Model explainability using Grad-CAM.
 Deployment to Streamlit Community Cloud.
 Confidence thresholding and uncertainty warnings.
 Mobile-friendly user interface.
-Technologies Used
-Python
-TensorFlow / Keras
-NumPy
-Pandas
-Matplotlib
-Seaborn
-Pillow
-Streamlit
-Git
-GitHub
+
 Conclusion
 This project successfully developed an end-to-end image classification system capable of distinguishing emergency vehicles from non-emergency vehicles using a Convolutional Neural Network.
 
