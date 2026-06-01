@@ -14,16 +14,6 @@ uploaded_file = st.file_uploader(
     type=["jpg", "jpeg", "png"]
 )
 
-import streamlit as st
-from PIL import Image
-from src.predict import predict_vehicle
-
-st.title("Emergency Vehicle Classifier")
-
-uploaded_file = st.file_uploader(
-    "Upload an image",
-    type=["jpg", "jpeg", "png"]
-)
 
 if uploaded_file is not None:
 
