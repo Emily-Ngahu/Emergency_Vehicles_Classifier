@@ -258,26 +258,20 @@ The `predict_vehicle` function was tested with example image paths, one of a kno
 
 To improve maintainability and prepare the project for deployment, the project was reorganized into a structured directory layout.
 
-Emergency_Vehicles_Classifier/
-│
-├── app/
-│   └── app.py
-│
-├── model/
-│   └── emergency_vehicle_classifier.keras
-│
-├── src/
-│   └── predict.py
-│
-├── Notebooks_code/
-│   └── EVC.ipynb
-│
-├── train/
-├── test/
-├── train.csv
-├── test.csv
-├── README.md
-└── requirements.txt
+## Folder Descriptions
+
+| Folder/File             | Purpose                                                                                                                                              |
+| :---------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `app/`                  | Contains the Streamlit web application (`app.py`) that provides the user interface for image upload and prediction.                                  |
+| `model/`                | Stores the trained CNN model saved in Keras format (`.keras`).                                                                                       |
+| `src/`                  | Contains reusable Python modules, including the prediction pipeline (`predict.py`).                                                                    |
+| `Notebooks_code/`       | Contains the Jupyter Notebook used for data preprocessing, model development, training, evaluation, and experimentation.                             |
+| `train/`                | Contains the training images used to train the CNN model.                                                                                            |
+| `test/`                 | Contains the testing images used for model evaluation and prediction testing.                                                                        |
+| `train.csv`             | Metadata file containing training image labels.                                                                                                      |
+| `test.csv`              | Metadata file containing testing image information.                                                                                                  |
+| `requirements.txt`      | Lists all Python dependencies required to run the project.                                                                                           |
+| `README.md`             | Provides project documentation, setup instructions, and implementation details.                                                                      |
 
 This structure separates model development, prediction functionality, and deployment components, making the project easier to maintain and extend.
 
